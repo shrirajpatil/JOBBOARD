@@ -1,0 +1,108 @@
+:root {
+  --primary-color: #6a0dad; /* Rich purple */
+  --secondary-color: #520b96; /* Darker purple */
+  --light-gray: #f4f4f4; /* Light background */
+  --text-color: #333; /* Dark text */
+  --border-color: #ddd; /* Light border */
+  --hover-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+  --transition-speed: 0.3s;
+}
+
+.App {
+  text-align: center;
+  margin: 20px;
+  font-family: 'Arial', sans-serif;
+  color: var(--text-color);
+  background-color: var(--light-gray);
+  padding: 20px 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.cards {
+  display: grid;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 10px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid var(--border-color);
+  padding: 20px;
+  cursor: pointer;
+  border-radius: 15px;
+  color: var(--text-color);
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform var(--transition-speed), box-shadow var(--transition-speed), background-color var(--transition-speed);
+  background: linear-gradient(145deg, #ffffff, #e6e6e6);
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  background-color: #fefefe;
+  box-shadow: var(--hover-shadow);
+}
+
+.company-info {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: var(--primary-color);
+}
+
+.hiring-info {
+  margin: 20px 0;
+  color: #666;
+  font-size: 1rem;
+}
+
+button {
+  width: 160px;
+  height: 50px;
+  margin: 20px;
+  border: none;
+  border-radius: 25px;
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color var(--transition-speed), transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+button:hover {
+  background: linear-gradient(90deg, var(--secondary-color), var(--primary-color));
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: var(--hover-shadow);
+}
+
+button:active {
+  transform: translateY(1px) scale(0.98);
+}
+
+@media (max-width: 768px) {
+  .App {
+    margin: 10px;
+    padding: 15px 5px;
+  }
+
+  .cards {
+    gap: 15px;
+  }
+
+  .card {
+    padding: 15px;
+  }
+
+  button {
+    width: 140px;
+    height: 45px;
+    font-size: 0.9rem;
+  }
+}
