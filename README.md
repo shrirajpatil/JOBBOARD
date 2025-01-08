@@ -3,7 +3,7 @@
 
 
 
-Live at - https://app.netlify.com/sites/shrirajpatil-jobboard/overview
+Live at - [https://app.netlify.com/sites/shrirajpatil-jobboard/overview](https://shrirajpatil-jobboard.netlify.app/)
 
 # Getting Started with Create React App
 
